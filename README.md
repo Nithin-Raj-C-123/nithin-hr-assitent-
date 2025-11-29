@@ -2,6 +2,56 @@
 # Overview
 NITHIN is a virtual HR support assistant built entirely with HTML, CSS, and JavaScript. It runs offline in the browser and provides instant support for HR-related queries such as leave policy, working hours, benefits, and more. The assistant also supports file uploads for basic resume analysis, sentiment detection, task management, and multilingual responses (English and Hindi). The interface is responsive and includes features like emoji picker, voice input, and theme toggle for enhanced user experience.
 
+# Architecture Diagram
++---------------------+
+|   User Interface    |
+| (HTML/CSS/JS)       |
++---------------------+
+          |
+          v
++---------------------+
+|   Core Logic        |
+| (JavaScript)        |
+| - FAQ DB            |
+| - Fuzzy Matching    |
+| - Message Handler   |
+| - State Management  |
++---------------------+
+          |
+          v
++---------------------+
+|   Features & APIs   |
+| - FileReader        |
+| - SpeechRecognition |
+| - SpeechSynthesis   |
+| - Emoji Picker      |
+| - Analytics         |
++---------------------+
+          |
+          v
++---------------------+
+| Persistence & Export|
+| - localStorage      |
+| - TXT/PDF Export    |
++---------------------+
+## Architecture Diagram — Brief Explanation
+- User Interface (HTML/CSS/JS):
+  This is the frontend where users interact with the assistant.
+  Users type or speak queries, upload files, and use features like emoji picker and theme toggle.
+
+- Core Logic (JavaScript):
+  Handles the main logic of the assistant.
+  Manages the FAQ database, performs fuzzy matching to find answers, renders messages, and maintains state using localStorage.
+
+- Features & APIs:
+  Integrates browser APIs for file upload (FileReader), voice input (SpeechRecognition), and text-to-speech (SpeechSynthesis).
+  Includes emoji picker and analytics for sentiment and user engagement.
+
+-Persistence & Export:
+  Saves chat history, tasks, and analytics in localStorage for persistence between sessions.
+  Allows users to export chat as TXT or print as PDF.
+
+
 # Features & Limitations
 
 ## Features
